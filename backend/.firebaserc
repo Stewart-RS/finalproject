@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "carnival-app-b84f4"
-  }
+    "default": "carnival-app-b84f4",
+    "staging": "afterhourscarnival-v2"
+  },
+  "targets": {}
 }

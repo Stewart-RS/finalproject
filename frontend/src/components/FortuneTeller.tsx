@@ -85,29 +85,34 @@ export default function ViewFortunes() {
   return (
     <>
       <div className="navigation">
-        <h2 id="pagetitle">Welcome to the Fortune Teller!</h2>
+        <h2 id="fortunetitle">Welcome to the Fortune Teller!</h2>
         <p>Click below to learn your fate. </p>
 
         <div className="tokensection">
-          <img id="tokenimage" alt="token" src="normToken.png" width="170"/>
-          <p id="tokens"><b>Tokens Left:</b> <br></br>
-          <div id="clicks">{clicks}</div></p>
+          <img id="tokenimage" alt="token" src="normToken.png" width="170" />
+          <p id="tokens">
+            <b>Tokens Left:</b> <br></br>
+            <div id="clicks">{clicks}</div>
+          </p>
         </div>
 
         <div id="fortune-container">
           <div id="RandomFortunesOnDemand">
             {/* <button onClick={handleClick}>Get Fortune</button> */}
             <p>
-              <span style={{ fontWeight: "bold" }}>Fortune: {" "}
-              {randomFortune?.fortune}</span>
+              <span style={{ fontWeight: "bold" }}>
+                Fortune: {randomFortune?.fortune}
+              </span>
             </p>
             <p>
-              <span style={{ fontWeight: "bold" }}>Lucky Color: {" "}
-              {randomFortune?.color}</span>
+              <span style={{ fontWeight: "bold" }}>
+                Lucky Color: {randomFortune?.color}
+              </span>
             </p>
             <p>
-              <span style={{ fontWeight: "bold" }}>Message: {" "}
-              {randomFortune?.message}</span>
+              <span style={{ fontWeight: "bold" }}>
+                Message: {randomFortune?.message}
+              </span>
             </p>
           </div>
           <input
@@ -122,7 +127,11 @@ export default function ViewFortunes() {
             disabled={disabled}
           ></input>
         </div>
-        <span id="moretokens"> Hit the bullseye for 5 more Tokens! <br></br><em>(You must be at 0 Tokens)</em></span>
+        <span id="moretokens">
+          {" "}
+          Hit the bullseye for 5 more Tokens! <br></br>
+          <em>(You must be at 0 Tokens)</em>
+        </span>
 
         <div>
           <input

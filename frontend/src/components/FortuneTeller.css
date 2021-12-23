@@ -1,14 +1,32 @@
-/* body.backgroundimage {
+/* .backgroundimage {
   background-image: url(http://localhost:3000/stars.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 50%;
+  margin-top: 0px;
+} */
+
+.navigation {
+  background-image: linear-gradient(
+      rgba(0, 0, 255, 0.383),
+      rgba(255, 115, 0, 0.431)
+    ),
+    url(http://localhost:3000/stars.jpg);
+  /* background-image: url(http://localhost:3000/stars.jpg); */
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: 50%;
   margin-top: 0px;
 }
 
-h2 {
+/* Cannot use h2 as it affects every h2 elements in the project */
+#fortunetitle {
   margin: 0px;
-} */
+}
+
+#fortunetitle {
+  color: antiquewhite;
+}
 
 #crystal-ball {
   margin-bottom: 50px;
@@ -34,11 +52,7 @@ h2 {
   padding: 50px;
 } */
 
-#pagetitle {
-  margin-top: 50px;
-}
-
-.tokensection{
+.tokensection {
   position: absolute;
   left: 65%;
 }
@@ -70,7 +84,7 @@ h2 {
     height: 550px;
   }
 
-  .tokensection{
+  .tokensection {
     left: 73%;
   }
 
@@ -85,19 +99,18 @@ h2 {
     height: 475px;
   }
 
-  .tokensection{
+  .tokensection {
     left: 80%;
   }
 
   #tokenimage {
     width: 150px;
   }
-  
+
   #tokens {
     transform: translate(30%, -60%);
   }
 }
-
 
 @media only screen and (max-width: 760px) {
   #crystal-ball {
@@ -106,10 +119,10 @@ h2 {
     margin-top: 150px;
   }
 
-  .tokensection{
+  .tokensection {
     left: 40%;
   }
-  
+
   #tokenimage {
     width: 140px;
   }
@@ -119,7 +132,7 @@ h2 {
   }
 
   #tokens {
-    margin-top: 10px; 
+    margin-top: 10px;
     transform: translate(35%, -75%);
     top: 80px;
     font-size: 14px;
@@ -127,7 +140,7 @@ h2 {
 }
 
 @media only screen and (max-width: 550px) {
-  .tokensection{
+  .tokensection {
     left: 34%;
   }
 }
@@ -137,8 +150,8 @@ h2 {
     width: 250px;
     height: 250px;
   }
-  
-  .tokensection{
+
+  .tokensection {
     left: 31%;
   }
 
@@ -150,4 +163,3 @@ h2 {
     transform: translate(35%, -80%);
   }
 }
-

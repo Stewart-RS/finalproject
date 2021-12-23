@@ -92,7 +92,7 @@ p {
 
 @media only screen and (min-width: 1300px) {
   .background {
-    background: no-repeat center bottom;   
+    background: no-repeat center bottom;
     margin-top: -110px;
     width: 1280px;
     height: 600px;

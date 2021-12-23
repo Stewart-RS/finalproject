@@ -8,9 +8,9 @@ const routes = express.Router();
 
 routes.get("/", async (req, res) => {
   //const client = await getClient();
-  res.send("hello");
+  res.send("Crikey it worked!");
 });
-//http://localhost:5001/carnival-app-b84f4/us-central1/api/fortunecookie
+//http://localhost:5001/afterhourscarnival-v2/us-central1/api/fortunecookie2
 routes.get("/fortunecookie", async (req, res) => {
   const fortune = req.query.fortune as string;
 
@@ -36,6 +36,7 @@ routes.get("/fortunecookie", async (req, res) => {
     res.status(500).json({ message: "The future looks bleak x__x" });
   }
 });
+//http://localhost:5001/afterhourscarnival-v2/us-central1/api/fortunecookie2?id=61a30a8c220033503f65a2
 //localhost:5001/carnival-app-b84f4/us-central1/api/fortunecookie?id=61a30a8c220033503f65a2
 //http://localhost:5001/carnival-app-b84f4/us-central1/api/fortunecookie/61a30a8c220033503f65a2f6
 routes.get("/fortunecookie/:id", async (req, res) => {

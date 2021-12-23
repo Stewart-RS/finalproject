@@ -6,7 +6,6 @@ import { Favorites } from "../context/FavoritesContext";
 import { Link } from "react-router-dom";
 import "./Drinks.css";
 
-
 export default function ViewDrinks() {
   const [drinks, setDrinks] = useState<Drink[]>([]);
   //   const [to, setTo] = useState("");
@@ -39,13 +38,15 @@ export default function ViewDrinks() {
   );
   return (
     <>
-      <div>
+      <div id="drinkStyling">
         <div>
-          <h2 id="pagetitle">Welcome to Tipsy Time!</h2>
-          <p>Select drink image for full recipe.</p>
+          <h2 id="drinkTitle">Welcome to Tipsy Time!</h2>
+          <p className="drink-para">Select drink image for full recipe.</p>
           {drinks.map((cocktail) => (
             <div>
-              <p style={{ fontWeight: "bold" }}>Enjoy a {cocktail.strDrink}!</p>
+              <p className="drink-para" style={{ fontWeight: "bold" }}>
+                Enjoy a {cocktail.strDrink}!
+              </p>
               <a
                 target="_blank"
                 href={"https://www.thecocktaildb.com/drink/" + cocktail.idDrink}
@@ -58,22 +59,24 @@ export default function ViewDrinks() {
                 />
               </a>
               <br></br>
-           
-                <button
-                  onClick={() => {
-                    console.log(cocktail);
-                    if (cocktail?.idDrink) {
-                      addToFavorites(cocktail);
-                      console.log(favoritesList);
-                    }
-                  }}
-                >
-                  Add to Favorites
-                </button>
+
+              <button
+                onClick={() => {
+                  console.log(cocktail);
+                  if (cocktail?.idDrink) {
+                    addToFavorites(cocktail);
+                    console.log(favoritesList);
+                  }
+                }}
+              >
+                Add to Favorites
+              </button>
             </div>
           ))}
         </div>
-        <button id="anotherdrink" onClick={handleClick}>Barkeep <br></br> Another Drink!</button>
+        <button id="anotherdrink" onClick={handleClick}>
+          Barkeep <br></br> Another Drink!
+        </button>
       </div>
     </>
   );
