@@ -1,11 +1,21 @@
-#pagetitle {
-    margin-top: 50px;
+/* #favStyling {
+  background-image: url(http://localhost:3000/bar2.jpg);
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  position: relative;
+} */
+
+#favPageTitle {
+  margin: 0px;
 }
 
 #content {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 #removebutton {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
